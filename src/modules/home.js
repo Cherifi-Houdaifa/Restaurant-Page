@@ -11,9 +11,12 @@ import img from "../karantika.jpg";
 
 export default () => {
     let homediv = document.createElement("div");
-    
+    homediv.setAttribute("id", "home")
+
     let header = document.createElement("h1");
     header.textContent = "Garantita";
+
+    let container = document.createElement("div");
 
     let p = document.createElement("p");
     let link = document.createElement("a");
@@ -25,9 +28,11 @@ export default () => {
     let image = document.createElement("img");
     image.src = img;
 
+    container.appendChild(p);
+    container.appendChild(image);
+
     homediv.appendChild(header);
-    homediv.appendChild(p);
-    homediv.appendChild(image);
+    homediv.appendChild(container);
 
     return homediv;
 }
